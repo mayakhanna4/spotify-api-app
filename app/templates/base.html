@@ -1,9 +1,9 @@
 <html>
     <head>
       {% if title %}
-      <title>{{ title }} - Microblog</title>
+      <title>{{ title }} -Spotify Searcher</title>
       {% else %}
-      <title>Welcome to Microblog</title>
+      <title>Welcome to Spotify Searcher</title>
       {% endif %}
       <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css">
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -22,10 +22,81 @@
    form {
     display: inline-block;
    }
+   .topnav {
+    background-color: #6ED12E;
+    overflow: hidden;
+    text-align: center;
+    font-size: 40px;
+   }
+   h2 {
+         font-family: cursive;
+         padding-bottom: 30px;
+         padding-top: 30px;
+         font-weight:bold;
+         font-size: 32pt;
+         color:black;
+   }
+  #logo_1 {
+    height: 85px;
+    float:left;
+    right:230px;
+    top: -2px;
+  }
+  #logo_2 {
+      height: 85px;
+      left:230px;
+      top: -2px;
+
+  }
+  ul {
+  display: inline;
+  list-style: none;
+}
+
+li {
+  display: inline;
+  cursor: pointer;
+  padding: 20px;
+  margin-left: -5px;
+}
+li:hover {
+  background: #909090;
+}
+#navigation-container{
+   background: black;
+   color: white;
+   width:100%;
+   height:70px;
+   text-align:center;
+}
+.sub_bar{
+
+}
+.sub-bar ul {
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  display:inline-block;
+  vertical-align:top;
+}
+.sub-bar li a {
+  color: white;
+  font-size: 16px;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  line-height: 70px;
+  padding: 5px 15px;
+  opacity: 0.7;
+}
    </style>
     </head>
     <body>
+      <div class="topnav">
+        <img id = "logo_1" src="http://www.corkoperahouse.ie/wp-content/uploads/2017/09/spotify-logo.png"  />
+        <h2> Welcome to Spotify Searcher!</h2>
 
+      </div>
+<!--
         <div>
 
           <form action="{{ url_for('index') }}">
@@ -37,6 +108,17 @@
           <form action="{{ url_for('search') }}">
                 <button>  Search </button>
           </form>
+    -->
+    <div class = "sub-bar">
+      <div id="navigation-container">
+
+        <ul>
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('login') }}">Login</a></li>
+          <li><a href="{{ url_for('search') }}">Search </a></li>
+        </ul>
+      </div>
+    </div>
 
        </div>
 
